@@ -26,6 +26,24 @@ if getgenv().library then
 getgenv().library:Unload()
 end
 
+local Library = {
+tabs = {},
+draggable = true,
+flags = {},
+title = "Catwinning.pub | Your name: " ..game.Players.LocalPlayer.Name,
+open = false,
+mousestate = inputService.MouseIconEnabled,
+popup = nil,
+instances = {},
+connections = {},
+options = {},
+notifications = {},
+tabSize = 0,
+theme = {},
+foldername = "Catwinning",
+fileext = ".cfg"
+}
+
 getgenv().library = library
 
 local dragging, dragInput, dragStart, startPos, dragObject
