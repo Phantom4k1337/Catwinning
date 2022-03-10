@@ -9,7 +9,7 @@ local Services = {
     RunService = game:GetService("RunService"),
     Lighting = game:GetService("Lighting"),
 }
--- [Nexus UI Library Source] --------------------------------------------------------------------------------------------------------------------------------------------------
+-- [Neverwinning UI Library Source] --------------------------------------------------------------------------------------------------------------------------------------------------
 getgenv().runService = game:GetService"RunService"
 getgenv().textService = game:GetService"TextService"
 getgenv().inputService = game:GetService"UserInputService"
