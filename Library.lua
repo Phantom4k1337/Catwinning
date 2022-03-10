@@ -9,9 +9,7 @@ local Services = {
     RunService = game:GetService("RunService"),
     Lighting = game:GetService("Lighting"),
 }
-
--- [Funcs]
-local Funcs = {};
+-- [Nexus UI Library Source] --------------------------------------------------------------------------------------------------------------------------------------------------
 getgenv().runService = game:GetService"RunService"
 getgenv().textService = game:GetService"TextService"
 getgenv().inputService = game:GetService"UserInputService"
@@ -22,11 +20,16 @@ local textService = textService
 local inputService = inputService
 local tweenService = tweenService
 
-local Library = {
+if getgenv().library then
+getgenv().library:Unload()
+end
+
+-- [UI Library Settings]
+local library = {
 tabs = {},
 draggable = true,
 flags = {},
-title = "Catwinning.pub | Your name: " ..game.Players.LocalPlayer.Name,
+title = "Neverwinning.cc",
 open = false,
 mousestate = inputService.MouseIconEnabled,
 popup = nil,
@@ -36,12 +39,9 @@ options = {},
 notifications = {},
 tabSize = 0,
 theme = {},
-foldername = "Catwinning",
-fileext = ".cfg"
+foldername = "Neverwinning",
+fileext = ".NW"
 }
-if getgenv().library then
-getgenv().library:Unload()
-end
 
 getgenv().library = library
 
@@ -2343,7 +2343,7 @@ end
 self.hasInit = true
 self.base = library:Create("ScreenGui", {
 IgnoreGuiInset = true
-})  -----
+})
 if runService:IsStudio() then
 self.base.Parent = script.Parent.Parent
 elseif syn then
