@@ -29,7 +29,7 @@ local library = {
 tabs = {},
 draggable = true,
 flags = {},
-title = "Neverwinning.cc",
+title = "Catwinning.pub",
 open = false,
 mousestate = inputService.MouseIconEnabled,
 popup = nil,
@@ -39,8 +39,8 @@ options = {},
 notifications = {},
 tabSize = 0,
 theme = {},
-foldername = "Neverwinning",
-fileext = ".NW"
+foldername = "Catwinning",
+fileext = ".CWP"
 }
 
 getgenv().library = library
