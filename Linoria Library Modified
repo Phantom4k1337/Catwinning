@@ -1955,21 +1955,6 @@ do
         Parent = SpectatorInner;
     });
 
-        local SpectatorsLabel = Library:CreateTextLabel({
-        Size = UDim2.new(0.980391979, 0, 1.14285719, 0);
-        Position = UDim2.new(0.0196080022, 0, 1.14285719, 0)
-        Text = 'Loading...';
-        ZIndex = 104;
-        Parent = SpectatorContainer;
-        BackgroundTransparency = 1
-        Position = UDim2.new(0.0196080022, 0, 1.14285719, 0)
-        Font = Enum.Font.Code
-        Text = "Loading..."
-        TextColor3 = Color3.fromRGB(255, 255, 255)
-        TextSize = 14.000
-        TextStrokeTransparency = 0.000
-    });
-
     Library:Create('UIListLayout', {
         FillDirection = Enum.FillDirection.Vertical;
         SortOrder = Enum.SortOrder.LayoutOrder;
