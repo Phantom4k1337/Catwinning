@@ -1909,6 +1909,7 @@ do
         Size = UDim2.new(0, 210, 0, 20);
         Visible = false;
         ZIndex = 100;
+        Name = "SpecList"
         Parent = ScreenGui;
     });
 
