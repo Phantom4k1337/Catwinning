@@ -1918,7 +1918,7 @@ do
         BorderMode = Enum.BorderMode.Inset;
         Size = UDim2.new(1, 0, 1, 0);
         ZIndex = 101;
-        Parent = KeybindOuter;
+        Parent = SpectatorOuter;
     });
 
     Library:AddToRegistry(SpectatorInner, {
@@ -1940,7 +1940,7 @@ do
 
     local SpectatorLabel = Library:CreateLabel({
         Size = UDim2.new(1, 0, 0, 20);
-        Text = 'Keybinds';
+        Text = 'Spectators';
         ZIndex = 104;
         Parent = SpectatorInner;
     });
