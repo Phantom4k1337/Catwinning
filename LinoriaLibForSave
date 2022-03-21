@@ -1934,7 +1934,7 @@ do
         Parent = SpectatorInner;
     });
 
-    Library:AddToRegistry(ColorFrame, {
+    Library:AddToRegistry(SpectatorColorFrame, {
         BackgroundColor3 = 'AccentColor';
     }, true);
 
