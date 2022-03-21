@@ -1954,7 +1954,7 @@ do
         Parent = SpectatorInner;
     });
     
-    local SpectatorLabel = Library:CreateLabel({
+    local SpectatorsLabel = Library:CreateLabel({
         Size = UDim2.new(1, 0, 0, 20);
         Position = (0.0196080022, 0, 1.14285719, 0)
         BackgroundTransparency = 1
