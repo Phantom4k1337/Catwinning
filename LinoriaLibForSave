@@ -1953,17 +1953,7 @@ do
         ZIndex = 1;
         Parent = SpectatorInner;
     });
-    
-    local SpectatorsLabel = Library:CreateLabel({
-        Size = UDim2.new(1, 0, 0, 20);
-        Position = (0.0196080022, 0, 1.14285719, 0)
-        BackgroundTransparency = 1
-        
-        Text = 'Loading...';
-        ZIndex = 104;
-        Parent = SpectatorInner;
-    });
-    
+
     Library:Create('UIListLayout', {
         FillDirection = Enum.FillDirection.Vertical;
         SortOrder = Enum.SortOrder.LayoutOrder;
