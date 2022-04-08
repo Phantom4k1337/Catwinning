@@ -214,7 +214,7 @@ local SaveManager = {} do
 
 			self.Library:Notify(string.format('Loaded config %q', name))
 		end)
-		section:AddButton('Save', function()
+		section:AddButton('Save config', function()
 			local name = Options.SaveManager_ConfigList.Value
 
 			local success, err = self:Save(name)
