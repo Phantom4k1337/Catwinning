@@ -26,7 +26,7 @@ local SaveManager = {} do
 		},
 		Input = {
 			Save = function(idx, object)
-				return { type = 'Input', idx = idx, value = object.Value }
+				return { type = 'Input', idx = idx, value = tostring(object.Value) }
 			end,
 			Load = function(idx, data)
 				if Options[idx] then 
