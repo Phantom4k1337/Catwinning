@@ -214,34 +214,16 @@ local SaveManager = {} do
 
 			self.Library:Notify(string.format('Loaded config %q', name))
 		end)
-	function SaveManager:Save(name)
-		local fullPath = self.Folder .. '/settings/' .. name .. '.json'
+		section:AddButton('Save', function()
+			local name = Options.SaveManager_ConfigList.Value
 
-		local data = {
-			objects = {}
-		}
+			local success, err = self:Save(name)
+			if not success then
+				return self.Library:Notify('Failed to save config: ' .. err)
+			end
 
-		for idx, toggle in next, Toggles do
-			if self.Ignore[idx] then continue end
-
-			table.insert(data.objects, self.Parser[toggle.Type].Save(idx, toggle))
-		end
-
-		for idx, option in next, Options do
-			if not self.Parser[option.Type] then continue end
-			if self.Ignore[idx] then continue end
-
-			table.insert(data.objects, self.Parser[option.Type].Save(idx, option))
-		end	
-
-		local success, encoded = pcall(httpService.JSONEncode, httpService, data)
-		if not success then
-			return false, 'failed to encode data'
-		end
-
-		writefile(fullPath, encoded)
-		return true
-	end
+			self.Library:Notify(string.format('Saved config %q', name))
+		end)
 		section:AddButton('Overwrite selected config', function()
 			local name = Options.SaveManager_ConfigList.Value
 
